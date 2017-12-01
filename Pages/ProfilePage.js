@@ -1,7 +1,7 @@
-var Observable = require("FuseJS/Observable");
-var Context = require("Modules/Context");
+const Observable = require("FuseJS/Observable");
+const Context = require("Modules/Context");
 
-var plateNum = Observable("");
+let plateNum = Observable("");
 
 load();
 
@@ -24,10 +24,6 @@ function plateSearch(plateNum) {
 module.exports = {
     profile: Context.store.profile,
     profileJson: Context.store.profile.map(obj => JSON.stringify(obj)),
-    load: load,
     clear: () => Context.store.profile.value = {},
-    save: save,
-    plateSearch: plateSearch,
-    status: status,
-    plateNum: plateNum
+    load, save, plateSearch, plateNum
 };

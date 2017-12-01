@@ -1,7 +1,7 @@
-var Observable = require("FuseJS/Observable");
-var Storage = require("FuseJS/Storage");
+const Observable = require("FuseJS/Observable");
+const Storage = require("FuseJS/Storage");
 
-var store = {
+const store = {
     profile: Observable()
 };
 
@@ -16,8 +16,7 @@ function save(key) {
 }
 
 module.exports = {
-    store: store,
-    load: load,
-    save: save,
-    plateSearch: plateSearch
+    store,
+    load,
+    save
 };
