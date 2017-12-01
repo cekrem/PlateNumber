@@ -1,0 +1,9 @@
+<App Background="#2196F3">
+	<Router ux:Name="router" />
+
+	<ClientPanel>
+		<Navigator DefaultPath="profile">
+			<ProfilePage ux:Template="profile" router="router" />
+		</Navigator>
+	</ClientPanel>
+</App>

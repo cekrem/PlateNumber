@@ -1,0 +1,9 @@
+<Page ux:Class="ProfilePage">
+	<Router ux:Dependency="router" />
+
+	<JavaScript File="ProfilePage.js" />
+
+	<DockPanel ClipToBounds="true">
+        
+	</DockPanel>
+</Page>
