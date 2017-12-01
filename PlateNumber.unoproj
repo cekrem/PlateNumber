@@ -6,7 +6,7 @@
   ],
   "Includes": [
     "*",
-    "Modules/*.js:Bundle"
+    "Modules/Context.js:Bundle"
   ]
 }
 

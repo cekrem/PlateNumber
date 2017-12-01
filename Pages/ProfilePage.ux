@@ -3,7 +3,12 @@
 
 	<JavaScript File="ProfilePage.js" />
 
-	<DockPanel ClipToBounds="true">
-        <Text Value="{status}" />
-	</DockPanel>
+	<StackPanel>
+	<Text Color="White" Value="Regnr:" />
+	<TextBox Value="{plateNum}" ValueChanged="{plateSearch}" />
+	<Text Value="{profileJson}" />
+	<Button Text="Save" Clicked="{save}" />
+	<Button Text="Load" Clicked="{load}" />
+	<Button Text="Clear" Clicked="{clear}" />
+	</StackPanel>
 </Page>
