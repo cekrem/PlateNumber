@@ -14,7 +14,6 @@ function saveProfile() {
 }
 
 function plateSearch(plateNum) {
-    saveProfile();
     console.log("running plateSearch: " + plateNum);
 
     return fetch("http://127.0.0.1:5000/plate/" + plateNum)
