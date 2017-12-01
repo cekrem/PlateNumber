@@ -1,9 +1,12 @@
+var Observable = require("FuseJS/Observable");
 var Context = require("Modules/Context");
+var status = Observable("loading");
+
 Context.loadProfile()
-    .catch(err => {
-        // Prompt for reg nr
-    })
+    .then(() => status.value = "ready",
+    () => status.value = "empty")
 
 module.exports = {
-	profile: null
+    profile: Context.profile,
+    status: status
 };

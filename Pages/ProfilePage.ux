@@ -4,6 +4,6 @@
 	<JavaScript File="ProfilePage.js" />
 
 	<DockPanel ClipToBounds="true">
-        
+        <Text Value="{status}" />
 	</DockPanel>
 </Page>

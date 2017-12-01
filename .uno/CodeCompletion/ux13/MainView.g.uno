@@ -1,6 +1,28 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
+    [Uno.Compiler.UxGenerated]
+    public partial class Template: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template(MainView parent, MainView parentInstance): base("profile", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::ProfilePage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "profile";
+    }
+    internal global::Fuse.Navigation.Router router;
     static MainView()
     {
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.Linear, "Linear");
@@ -135,12 +157,17 @@ public partial class MainView: Fuse.App
         var temp14 = new global::FuseJS.Bundle();
         var temp15 = new global::FuseJS.FileReaderImpl();
         var temp16 = new global::FuseJS.UserEvents();
+        router = new global::Fuse.Navigation.Router();
         var temp17 = new global::Fuse.Controls.ClientPanel();
-        var temp18 = new global::Fuse.Controls.StackPanel();
-        var temp19 = new global::Fuse.Controls.Text();
+        var temp18 = new global::Fuse.Controls.Navigator();
+        var profile = new Template(this, this);
+        this.Background = float4(0.1294118f, 0.5882353f, 0.9529412f, 1f);
+        router.Name = __selector0;
         temp17.Children.Add(temp18);
-        temp18.Children.Add(temp19);
-        temp19.Value = "Tricky Trails";
+        temp18.DefaultPath = "profile";
+        temp18.Templates.Add(profile);
+        this.Children.Add(router);
         this.Children.Add(temp17);
     }
+    static global::Uno.UX.Selector __selector0 = "router";
 }
