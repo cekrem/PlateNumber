@@ -1,0 +1,4 @@
+$: -1079746099
+BuildCommand: build.sh
+RunCommand: run.sh
+Product: build/Release-iphoneos/PlateNumber.app/PlateNumber
